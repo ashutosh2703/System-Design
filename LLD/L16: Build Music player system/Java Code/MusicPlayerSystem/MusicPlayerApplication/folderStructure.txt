@@ -1,0 +1,40 @@
+MusicPlayerApplication/
+│   Main.java                      # Composition root and entry point
+│   MusicPlayerApplication.java    # High-level application/demo runner
+│   MusicPlayerFacade.java         # Facade class (orchestrator)
+│
+├── core/
+│   └── AudioEngine.java           #Playback engine  
+│
+├── strategies/
+│   ├── PlayStrategy.java
+│   ├── SequentialPlayStrategy.java
+│   ├── RandomPlayStrategy.java
+│   └── CustomQueueStrategy.java
+│
+├── enums/                         # All shared enum types
+│   ├── DeviceType.java            # enum class DeviceType { BLUETOOTH, WIRED, HEADPHONES }
+│   └── PlayStrategyType.java      # enum class PlayStrategyType { SEQUENTIAL, RANDOM, CUSTOM_QUEUE }
+│
+├── models/
+│   ├── Song.java
+│   └── Playlist.java
+│
+├── device/                        # Audio device interfaces & adapters
+│   ├── IAudioOutputDevice.java
+│   ├── WiredSpeakerAdapter.java
+│   ├── HeadphonesAdapter.java
+│   └── BluetoothSpeakerAdapter.java
+│
+├── external/                      # External devices
+│   ├── WiredSpeakerAPI.java
+│   ├── HeadphonesAPI.java
+│   └── BluetoothSpeakerAPI.java
+│
+├── factories/
+│   └── DeviceFactory.java        # Creates IAudioOutputDevice instances
+│
+└── managers/
+    ├── PlaylistManager.java
+    ├── StrategyManager.java
+    └── DeviceManager.java
