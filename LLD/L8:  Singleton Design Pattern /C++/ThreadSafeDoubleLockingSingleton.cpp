@@ -1,11 +1,12 @@
 #include<iostream>
 #include <mutex>
+#include <atomic>
 
 using namespace std;
 
 class Singleton {
 private:
-    static Singleton* instance;
+    static atomic<Singleton*> instance; // atomic: unlocked first check must not race with the write
     static mutex mtx;
 
     Singleton() { 
@@ -26,7 +27,7 @@ public:
 };
  
 // Initialize static members
-Singleton* Singleton::instance = nullptr;
+atomic<Singleton*> Singleton::instance{nullptr};
 mutex Singleton::mtx;
 
 int main() {

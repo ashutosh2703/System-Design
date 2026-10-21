@@ -1,5 +1,5 @@
 public class ThreadSafeDoubleLockingSingleton {
-    private static ThreadSafeDoubleLockingSingleton instance = null;
+    private static volatile ThreadSafeDoubleLockingSingleton instance = null; // volatile is required for double-checked locking
 
     private ThreadSafeDoubleLockingSingleton() {
         System.out.println("Singleton Constructor Called!");

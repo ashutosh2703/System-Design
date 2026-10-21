@@ -36,7 +36,7 @@ class PaytmBankingSystem : public BankingSystem {
 public:
     PaytmBankingSystem() {}
     bool processPayment(double amount) override {
-        // Simulate 20% success
+        // Simulate 80% success
             int r = rand() % 100;
             return r < 80;
     }

@@ -1,5 +1,8 @@
 #pragma once
 #include<iostream>
+#include<queue>
+#include<stack>
+#include<stdexcept>
 #include "../models/Playlist.hpp"
 #include "PlayStrategy.hpp"
 
@@ -44,7 +47,7 @@ public:
     }
 
     bool hasNext() override {
-        return ((currentIndex + 1) < currentPlaylist->getSize());
+        return !nextQueue.empty() || ((currentIndex + 1) < currentPlaylist->getSize());
     }
 
     Song* next() override {
@@ -73,7 +76,7 @@ public:
     }
 
     bool hasPrevious() override {
-        return (currentIndex - 1 > 0);
+        return (currentIndex > 0);
     }
 
     Song* previous() override {

@@ -80,6 +80,7 @@ int main() {
     // → Processed JSON: {"name":"Alice", "id":42}
 
     // 5. Cleanup
+    delete client;
     delete adapter;
     delete xmlProv;
     return 0;

@@ -66,7 +66,7 @@ public:
     }
 };
 
-// Invoker: Remote Controller with static 2D array of 6 buttons (3 rows, 2 cols)
+// Invoker: Remote Controller with static array of 4 buttons
 class RemoteController {
 private:
     static const int numButtons = 4;

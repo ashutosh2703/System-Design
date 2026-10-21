@@ -97,7 +97,7 @@ public:
         return total;
     }
 
-    void setTotal(int total) {
+    void setTotal(double total) {
         this->total = total;
     }
 };

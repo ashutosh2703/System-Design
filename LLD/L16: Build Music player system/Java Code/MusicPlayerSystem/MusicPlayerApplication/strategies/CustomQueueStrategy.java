@@ -45,7 +45,7 @@ public class CustomQueueStrategy implements PlayStrategy {
 
     @Override
     public boolean hasNext() {
-        return ((currentIndex + 1) < currentPlaylist.getSize());
+        return !nextQueue.isEmpty() || ((currentIndex + 1) < currentPlaylist.getSize());
     }
 
     @Override
@@ -74,7 +74,7 @@ public class CustomQueueStrategy implements PlayStrategy {
 
     @Override
     public boolean hasPrevious() {
-        return (currentIndex - 1 > 0);
+        return (currentIndex > 0);
     }
 
     @Override

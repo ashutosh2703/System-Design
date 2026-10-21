@@ -31,7 +31,7 @@ class PaytmBankingSystem implements BankingSystem {
 
     @Override
     public boolean processPayment(double amount) {
-        // Simulate 20% success
+        // Simulate 80% success
         int r = rand.nextInt(100);
         return r < 80;
     }

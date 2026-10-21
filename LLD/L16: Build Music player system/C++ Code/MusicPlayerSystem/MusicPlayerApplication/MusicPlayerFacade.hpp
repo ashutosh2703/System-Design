@@ -99,7 +99,7 @@ public:
             audioEngine->play(device, prevSong);
         }
         else {
-            cout << "Completed playlist: " << loadedPlaylist->getPlaylistName() << "\n";
+            cout << "No previous track in playlist: " << loadedPlaylist->getPlaylistName() << "\n";
         }
     }
 

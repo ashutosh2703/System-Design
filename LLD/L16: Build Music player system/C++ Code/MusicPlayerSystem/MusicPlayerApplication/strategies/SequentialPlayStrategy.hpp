@@ -34,7 +34,7 @@ public:
     }
 
     bool hasPrevious() override {
-        return (currentIndex - 1 > 0);
+        return (currentIndex > 0);
     }
 
     // previous in Loop

@@ -1,5 +1,10 @@
 #pragma once
 #include<iostream>
+#include<vector>
+#include<stack>
+#include<cstdlib>
+#include<ctime>
+#include<stdexcept>
 #include "../models/Playlist.hpp"
 #include "PlayStrategy.hpp"
 

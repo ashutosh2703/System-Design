@@ -153,8 +153,8 @@ class Logger implements IObserver {
     }
 
     public Logger(NotificationObservable observable) {
-        notificationObservable.addObserver(this);
         this.notificationObservable = observable;
+        notificationObservable.addObserver(this);
     }
 
     public void update() {

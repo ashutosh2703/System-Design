@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 import strategies.*;
 
@@ -57,7 +58,7 @@ public abstract class Order {
     }
 
     public void setItems(List<MenuItem> its) {
-        items = its;
+        items = new ArrayList<>(its);
         total = 0;
         for (MenuItem i : items) {
             total += i.getPrice();

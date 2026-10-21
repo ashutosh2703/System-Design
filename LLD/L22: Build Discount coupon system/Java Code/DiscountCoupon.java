@@ -348,7 +348,7 @@ class BankingCoupon extends Coupon {
 
     @Override
     public String name() {
-        return bank + " Bank Rs " + (int)percent + " off upto " + (int)offCap;
+        return bank + " Bank " + (int)percent + "% off upto Rs " + (int)offCap;
     }
 }
 

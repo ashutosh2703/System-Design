@@ -54,7 +54,7 @@ class SportsCar implements Car {
     @Override
     public void shiftGear(int gear) {
         if (!isEngineOn) {
-            System.out.println(brand + " " + model + " : Engine is off! Cannot Cannot Shift Gear.");
+            System.out.println(brand + " " + model + " : Engine is off! Cannot Shift Gear.");
             return;
         }
         this.currentGear = gear;

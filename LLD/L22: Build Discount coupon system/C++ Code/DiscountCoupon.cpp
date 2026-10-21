@@ -278,7 +278,7 @@ public:
         return true;
     }
     string name() override {
-        return "Seasonal Offer " + to_string((int)percent) + " % off " + category;
+        return "Seasonal Offer " + to_string((int)percent) + "% off " + category;
     }
 };
 
@@ -343,7 +343,7 @@ public:
         bank = b;
         minSpend = ms;
         this->percent = percent;
-        this->offCap = percent;
+        this->offCap = offCap;
         strat = DiscountStrategyManager::getInstance()->getStrategy(StrategyType::PERCENT_WITH_CAP, percent, offCap);
     }
     ~BankingCoupon() {
@@ -357,7 +357,7 @@ public:
         return strat->calculate(cart->getCurrentTotal());
     }
     string name() override {
-        return bank + " Bank Rs " + to_string((int)percent) + " off upto " + to_string((int) offCap);
+        return bank + " Bank " + to_string((int)percent) + "% off upto Rs " + to_string((int) offCap);
     }
 };
 

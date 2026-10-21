@@ -95,7 +95,7 @@ public class MusicPlayerFacade {
             IAudioOutputDevice device = DeviceManager.getInstance().getOutputDevice();
             audioEngine.play(device, prevSong);
         } else {
-            System.out.println("Completed playlist: " + loadedPlaylist.getPlaylistName());
+            System.out.println("No previous track in playlist: " + loadedPlaylist.getPlaylistName());
         }
     }
 
